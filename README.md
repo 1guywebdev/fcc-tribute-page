@@ -1,2 +1,2 @@
-# fcc-tribute-page.github.io
+# FCC Tribute Page
 This is my freeCodeCamp tribute webpage project
