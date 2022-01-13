@@ -14,3 +14,16 @@ var span = document.getElementsByClassName("close-modal")[0];
 span.onclick = function(){
   modal.style.display = "none";
 }
+
+
+const details = document.querySelectorAll("details");
+
+details.forEach((targetDetail) => {
+  targetDetail.addEventListener("click", () => {
+    details.forEach((detail) => {
+      if (detail !== targetDetail) {
+        detail.removeAttribute("open");
+      }
+    });
+  });
+});
