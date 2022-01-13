@@ -7,11 +7,21 @@
 </head>
 <main id="main">
   <h1 id="title">President Nelson R. Mandela</h1>
-  <h2 id="title-descr">The man who changed South-Africa.<br><img id="imghd" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg" alt="Flag_of_South_Africa"></h2>
-    <div id="img-div">
-      <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Nelson_Mandela_-_full_%28cropped%29.jpg" alt="Mandela receiving the freedom of the city of Tshwane">
-      <p id="img-caption">President Mandela, middle, receiving the freedom of the city of Tshwane, 2008</p>
+  <div id="title-div">
+    <h2 id="title-descr">The man who changed South-Africa.</h2>
+    <a href="https://en.wikipedia.org/wiki/South_Africa" target="_blank" data-tool-tip="Click me to see a Wikipedia page about South-Africa">
+      <img id="imghd" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg" alt="Flag_of_South_Africa" />
+    </a>
+  </div>
+  <div id="img-div">
+    <a href="#" data-tool-tip="Click the image for a bigger version"><img id="image" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Nelson_Mandela_-_full_%28cropped%29.jpg" alt="Mandela receiving the freedom of the city of Tshwane" /></a>
+    <p>President Mandela, middle, receiving the freedom of the city of Tshwane, 2008</p>
+    <div id="modal" class="modal-main">
+      <span class="close-modal">&times;</span>
+      <img id="modal-image" class="modal-content" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Nelson_Mandela_-_full_%28cropped%29.jpg" alt="Mandela receiving the freedom of the city of Tshwane" />
+      <div id="img-caption">President Mandela, middle, receiving the freedom of the city of Tshwane, 2008</div>
     </div>
+  </div>
 <hr>
 <br>
   <article id="tribute-info">
@@ -48,4 +58,5 @@
 <hr>
   <p id="link">Please consider taking a few moments to read an in-depth article<a id="tribute-link" href="https://en.wikipedia.org/wiki/Nelson_Mandela" target="_blank"> about Nelson Mandela</a> from the Wikipedia article.</p>
 </main>
+<script src="javascript/scripts.js"></script>
 </html>
