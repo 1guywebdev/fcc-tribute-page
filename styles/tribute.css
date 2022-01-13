@@ -1,20 +1,79 @@
 html{
   background-color: #ffeed1;
-  color: black;
+  color: #242220;
 }
 main {
   text-align: center;
+}
+#title-div {
+  display: inline-block;
+  column-count: 1;
 }
 #title {
   font-family: Arial, monospace;
   text-decoration: underline;
   font-size: 40px;
   text-shadow: 2px 2px 5px #524f4b;
+  color: #242220;
+}
+#img-div {
+  display: block;
 }
 #imghd {
   height: 30px;
   width: auto;
-  box-shadow: 0px 2px 5px #524f4b;
+  margin-bottom: 3em;
+  animation: pulse1 1.5s infinite;
+  transition: 0.3s;
+}
+@keyframes pulse1 {
+  0% {box-shadow: none;}
+  50% {box-shadow: 0px 2px 15px #524f4b;}
+  100% {box-shadow: none;}
+}
+#imghd:hover {
+  opacity: 0.5;
+}
+a[data-tool-tip] {
+  position: relative;
+}
+#title-div a[data-tool-tip]::before {
+  content: attr(data-tool-tip);
+  display: block;
+  position: absolute;
+  background-color: #524f4b;
+  padding: 1em 3em;
+  color: white;
+  border-radius: 10px;
+  bottom: 0;
+  left: 0;
+  white-space: nowrap;
+  transform: scale(0);
+  transition: tooltip ease-out .3s, bottom ease-out .3s;
+}
+#title-div a[data-tool-tip]:hover::before {
+  transform: scale(1);
+  bottom: 100%;
+  transform: translateY(-50%);
+}
+#img-div a[data-tool-tip]::before {
+  content: attr(data-tool-tip);
+  display: block;
+  position: absolute;
+  background-color: #524f4b;
+  border-radius: 15px;
+  padding: 1em 3em;
+  color: white;
+  bottom: 0;
+  left: 0;
+  white-space: nowrap;
+  transform: scale(0);
+  transition: tooltip ease-out .3s, bottom ease-out .3s;
+}
+#img-div a[data-tool-tip]:hover::before {
+  transform: scale(1);
+  bottom: 100%;
+  transform: translateY(-400%);
 }
 #tribute-info {
   padding-left: 5%;
@@ -31,11 +90,73 @@ h4 {
   text-decoration: underline;
 }
 #image {
-  display: block;
   max-width: 50%;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 4px 5px #524f4b;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.modal-main {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: #000000;
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 80%;
+}
+#img-caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+.modal-content, #img-caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+.close-modal {
+  background-color: transparent;
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close-modal:hover,
+.close-modal:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px){
+  .modal-content {
+    width: 100%;
+  }
 }
 #link {
   font-family: Calibri, Arial, sans-serif;
