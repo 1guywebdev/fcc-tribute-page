@@ -84,7 +84,7 @@ a[data-tool-tip] {
   left: 0;
   white-space: nowrap;
   transform: scale(0);
-  transition: tooltip ease-out .3s, bottom ease-out .3s;
+  transition: tooltip ease-out 50ms, bottom ease-out 50ms;
 }
 #title-div a[data-tool-tip]:hover::before {
   transform: scale(1);
@@ -103,7 +103,7 @@ a[data-tool-tip] {
   left: 0;
   white-space: nowrap;
   transform: scale(0);
-  transition: tooltip ease-out .3s, bottom ease-out .3s;
+  transition: tooltip ease-out 50ms, bottom ease-out 50ms;
 }
 #img-div a[data-tool-tip]:hover::before {
   transform: scale(1);
